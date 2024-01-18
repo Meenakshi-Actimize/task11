@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Mini project</title>
+</head>
+<body>
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">MS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="./products.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="./details.html">Details</a>
+                  </li>  
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="./contact.html">Contact</a>
+                  </li>  
+        </ul>      
+    </div>
+    </nav>
+    <!-- nav end -->
+        <h3 class="text-center text-danger">Sign up!!</h3>
+        <div class="container bg-light">
+
+        <!-- form start -->
+
+        <form name="myForm" id="myform" onsubmit="return validation()" method="post" required>
+            <div class="row">
+                <!-- Username -->
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Full Name</label>
+                    <input type="text" id="username" placeholder="Enter your full name" class="form-control">
+                    <span id="nameerror" class="text-danger"></span>
+                    
+                </div>
+                <!-- Email-id -->
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Email Id</label>
+                    <input type="mailid" id="emailids" placeholder="Place your Email address" class="form-control">
+                    <span id="emailerror" class="text-danger"></span>
+                    
+                </div>
+                <!-- Phone number -->
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Mobile number</label>
+                    <input type="number" id="num" placeholder="Enter phone  number" class="form-control">
+                    <span id="phoneerror" class="text-danger"></span>
+                </div>
+                <!-- DOB -->
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dateOfBirth" class="form-control">
+                    <span id="dateofBirthErr" class="text-danger"></span>
+                </div>
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Create Password</label>
+                    <input type="password" id="passwrd" placeholder="Please enter password" class="form-control">
+                    <span id="passwrdErr" class="text-danger"></span>
+                </div>
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirpasswrd" placeholder ="Please reenter password" class="form-control">
+                    <span id="confirpasswrdErr" class="text-danger"></span>
+                </div>
+
+                <!-- Country name -->
+                <div class="col-5 ms-5 mt-3 ps-3 ">
+                    <label>Country</label>
+                    <select class="form-select" id="countryname">
+                        <option>Select Your country</option>
+                        <option>India</option>
+                        <option>Australia</option>
+                        <option>New york</option>
+                    </select>
+                    <span id="droperror" class="text-danger"></span>
+                </div>
+                <!-- Gender -->
+                <div class="col-5 ms-5 mt-3 ps-3">
+                    <label>Gender</label>
+                    <div class="form-check" id="genders">
+                        <label class="radio-inline mx-3">
+                            <input type="radio" name="optradios" id="optradio1">Male
+                        </label>
+                        <label class="radio-inline mx-3">
+                            <input type="radio" name="optradios" id="optradio2">Female
+                        </label>
+                        <label class="radio-inline mx-3">
+                            <input type="radio" name="optradios" id="optradio3">Others
+                        </label>
+                    </div>
+                    <span id="genderError" class="text-danger"></span>
+            </div>
+            <!-- Checkbox -->
+            <div class="col-5 ms-5 mt-3 ps-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="defaultcheck1" name="" value="something" >
+                    <label class="form-check-label" for="defaultcheck1">Agree to privacy policy</label>
+                </div>
+                <span id="checkerror" class="text-danger"></span>
+            </div>
+            <!-- submit button -->
+            <div class="col-md-12 mt-5 mb-3 mx-5">
+                <button type="button" class="btn btn-primary" id="submitButton" onclick="validation()">
+                Submit
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </form>
+                                <!-- END OF FORM -->
+
+                                <!-- MODAL FORM -->
+
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5 text-warning" id="exampleModalLabel">Congratulations!!!!</h1>
+        </div>
+        <div class="modal-body text-success">
+        Form submitted successfully....
+        </div>
+        <div class="feedback">
+            <p class="text-center fs-2">Rate This</label>
+            <div class="container text-center">
+            <i class="fa fa-star fs-3" aria-hidden="true" id="st1"></i>
+            <i class="fa fa-star fs-3" aria-hidden="true" id="st2"></i>
+            <i class="fa fa-star fs-3" aria-hidden="true" id="st3"></i>
+            <i class="fa fa-star fs-3" aria-hidden="true" id="st4"></i>
+            <i class="fa fa-star fs-3" aria-hidden="true" id="st5"></i>
+            </div>
+            <p class="text-center" id="com"></p>
+        </div>
+
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-info">Save changes</button>
+        </div>
+    </div>
+    </div>
+    </div>
+        
+    
+                                    <!-- MODAL END -->
+
+    <!-- form end -->
+    
+
+    <!-- footer start -->
+
+    <footer id="footer" class="mt-4">
+        <div class="container-fluid bg-dark">
+            <div class="row mx-3">
+                <div class="col-md-5 text-white mt-3">
+                    <h4 class="text-primary mb-0">Contact Us</h4>
+                    <p> Shop 1 & 2, Labbaik House<br>Maharashtra 400050<br>Phone: (+91) 8296809959<br>Email: hello@Ekart.com
+
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-white mt-3">
+                    <h4 class="text-primary">Follow Us</h4>
+                        <ul class="list-unstyled mb-0">
+                             <a href=""><i class="fa fa-facebook-official me-2 fs-2"></i></a>
+                             <a href=""><i class="fa fa-instagram me-2 fs-2 text-danger"></i></a>
+                             <a href=""><i class="fa fa-twitter fs-2"></i></a>
+                          
+                        </ul>
+                </div>
+                <div class="col-md-3 text-white mt-3">
+                    <h4 class="text-primary">More</h4>
+                        <p>Gift cards<br>Blog<br>FAQ</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center text-white">
+                <a href="#">&copy; 2024 Ekart. All copyrights reserved. </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
